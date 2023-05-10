@@ -38,8 +38,9 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #000000;
-  width: 85.4rem;
+  background-color: #000000;
+  width: 84.3rem;
+  margin: auto;
   height: 4.5em;
 }
 nav {
@@ -74,7 +75,5 @@ nav a:hover, nav a:focus {
 .icon {
   margin-top: 0.4em;
 }
-@media (min-width: 1024px) {
-  
-}
+
 </style>

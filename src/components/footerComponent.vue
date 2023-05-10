@@ -22,7 +22,8 @@ footer{
   gap: 0.3em;
   align-items: center;
   background: #000000;
-  width: 85.4rem;
+  max-width: 84.3rem;
+  width: 100%;
   height: 4.5em;
   text-align: center;
   
@@ -43,7 +44,4 @@ nav a {
   line-height: 2.3em;
 }
 
-@media (min-width: 1024px) {
-  
-}
 </style>

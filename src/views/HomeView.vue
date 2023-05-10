@@ -66,7 +66,7 @@ import footerComponent from '../components/footerComponent.vue';
           </div>
         </section>
         <table>
-        <tr>
+        <tr class="tableHead">
           <th class="headername">
             <input type="checkbox" name="" id="">
             <span>Name</span>
@@ -158,7 +158,7 @@ import footerComponent from '../components/footerComponent.vue';
       </div>
         
         <table>
-        <tr>
+        <tr class="tableHead">
           <th class="headername">
             <input type="checkbox" name="" id="">
             <span>Name</span>
@@ -233,7 +233,7 @@ import footerComponent from '../components/footerComponent.vue';
       place-items: center;
       place-content: center;
       font-family: Helvetica Neue;
-      width: 85.4rem;
+      max-width: 85.4rem;
       margin: auto;
       line-height: 1.5;
   }
@@ -358,7 +358,6 @@ import footerComponent from '../components/footerComponent.vue';
     width: 74em;
     margin: 0 auto;    
     border-collapse: collapse;
-    border-bottom: none;
   }  
   th {
     text-align: left;
@@ -366,6 +365,10 @@ import footerComponent from '../components/footerComponent.vue';
   tr {
     height: 4.5em;  
     border: 0.1em solid #ddd;
+    border-bottom: none;
+  }
+  tr:first-child {
+   border: none;
   }
   .secondTable {
     display: grid;
@@ -380,8 +383,8 @@ import footerComponent from '../components/footerComponent.vue';
     flex-direction: row;
     margin:-2em auto auto auto;
     background-color: #F5F5F5;
-    width:80em;
-    height: 3.5em; 
+    width:74em;
+    height: 3.9em; 
   }
   .upcoming a {
     color: #000000;
@@ -389,9 +392,7 @@ import footerComponent from '../components/footerComponent.vue';
     padding: 0.3em;
     width: 15em;
     text-align: center;
-    margin-left: 63.6em;
-    margin-top: 0.8em;
-    margin: 0.8em auto auto 63.6em;
+    margin: 0.8em auto auto 57.9em;
     background-color: #FFFFFF;
     border: 0.1em solid #E0E0E0;
     border-radius: 0.6em;
@@ -423,11 +424,18 @@ import footerComponent from '../components/footerComponent.vue';
   .name, .headername {
     margin-left: 0.8em;
     margin-top: 1.5em;
-    /* height: 3em; */
     display: flex;
     gap: 0.5em;
     align-items: center;
     line-height: 2em;
+  }
+  .headername {
+    margin-top: 1.1em;
+  }
+  table .tableHead {
+    background-color: #F5F5F5;
+    border: 0.1em solid #ddd;
+    /* border-radius: 1em 0.5em 0em 0em; */
   }
   .headername img {
     margin-top: 0.54em;
