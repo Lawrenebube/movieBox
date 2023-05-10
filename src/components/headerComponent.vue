@@ -43,7 +43,7 @@ header {
   height: 4.5em;
 }
 nav {
-  padding-left: 3em;
+  padding-left: 5em;
   display: grid;
   grid-template-columns: repeat(6,1fr);
   display: flex;
@@ -64,7 +64,7 @@ nav a:hover, nav a:focus {
 .icons {
   display: flex;
   gap: 1em;
-  padding-right: 3em;
+  padding-right: 5em;
 }
 .profilepic {
   width: 2em;

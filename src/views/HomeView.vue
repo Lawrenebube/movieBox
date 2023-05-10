@@ -6,7 +6,9 @@ import footerComponent from '../components/footerComponent.vue';
 <template>
   <div class="overview">
     <headerComponent/>
-    <header class="header">
+    
+    <main> 
+      <div class="header">
       <h1>Overview</h1>
       <div class="headerButtons">
         <button aria-label="filter">
@@ -18,8 +20,7 @@ import footerComponent from '../components/footerComponent.vue';
           <span>Export</span>
         </button>
       </div>
-    </header>
-    <main>
+    </div>
       <section class="graphSection">
         <div class="graphBox">
           <section  class="graphHeader">
@@ -239,10 +240,11 @@ import footerComponent from '../components/footerComponent.vue';
   .header {
     display: flex;
     justify-content: space-between;
-    width: 85.4rem;
+    width: 82rem;
     margin: auto;
-    padding: 1em 3em;
+    padding: 1em 3.4em;
     color: #000000;
+    
   }
   header h1 {
     font-size: 1.5rem;
@@ -266,16 +268,16 @@ import footerComponent from '../components/footerComponent.vue';
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 85.4em;
+    width: 82em;
     margin: auto;
   }
   
   .graphSection {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    width: 82em;
+    padding: 1em 4em;
     gap: 2em;
-    width: 84.3em;
-    padding: 1em 3em;
   }
   .graphBox {
     border: 0.1em solid #E5E5E5;
@@ -293,7 +295,6 @@ import footerComponent from '../components/footerComponent.vue';
     color: #000000;
     font-size: 0.8rem;
     padding: 0.5em 1.2em;
-    /* justify-content: center; */
   }
   .viewReport {
     display: flex;
@@ -327,12 +328,11 @@ import footerComponent from '../components/footerComponent.vue';
     grid-template-columns: 1fr;
     place-content: center;
     gap: 2em;
-     /* padding: 1em 3em;  */
   }
   .firstTableHeading, .secondTableHeading {
     display: flex;
     justify-content: space-between;
-    width: 80em;
+    width: 74em;
     margin: auto;
   }
   .searchBar input {
@@ -355,10 +355,10 @@ import footerComponent from '../components/footerComponent.vue';
     margin-top: 0.45em;
   }
   table {
-    width: 80em;
-    margin: 0 auto;
-    border: 0.1em solid #ddd;
+    width: 74em;
+    margin: 0 auto;    
     border-collapse: collapse;
+    border-bottom: none;
   }  
   th {
     text-align: left;
@@ -373,16 +373,28 @@ import footerComponent from '../components/footerComponent.vue';
     gap: 2em;
     width: 84.3em;
     padding: 1em 3em;
-    
+    margin: 0;
   }
   .upcoming {
-    /* display: grid;
-    place-content: right; */
+    display: flex;
+    flex-direction: row;
     margin:-2em auto auto auto;
-    text-align: right;
     background-color: #F5F5F5;
     width:80em;
-    height: 3.5em;   
+    height: 3.5em; 
+  }
+  .upcoming a {
+    color: #000000;
+    height: 2.2em;
+    padding: 0.3em;
+    width: 15em;
+    text-align: center;
+    margin-left: 63.6em;
+    margin-top: 0.8em;
+    margin: 0.8em auto auto 63.6em;
+    background-color: #FFFFFF;
+    border: 0.1em solid #E0E0E0;
+    border-radius: 0.6em;
   }
   .view {
     display: flex;
