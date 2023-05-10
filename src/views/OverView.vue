@@ -1,8 +1,3 @@
-<script setup>
-import headerComponent from '../components/headerComponent.vue';
-import footerComponent from '../components/footerComponent.vue';
-</script>
-
 <template>
   <div class="overview">
     <headerComponent/>
@@ -80,7 +75,7 @@ import footerComponent from '../components/footerComponent.vue';
           <th>Premier Date</th>
           <th></th>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/avengersImage.png" alt="">
             <span>Avengers Black Widow</span>
@@ -94,7 +89,7 @@ import footerComponent from '../components/footerComponent.vue';
           <td>21th May, 2022</td>
           <td class="view">View</td>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/moonlightImage.png" alt="">
             <span>Moonlight</span>
@@ -108,7 +103,7 @@ import footerComponent from '../components/footerComponent.vue';
           <td>15th August, 2022</td>
           <td class="view">View</td>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/grimabyImage.png" alt="">
             <span>Grimsby</span>
@@ -122,7 +117,7 @@ import footerComponent from '../components/footerComponent.vue';
           <td>5th October, 2022</td>
           <td class="view">View</td>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/spiderman.png" alt="">
             <span>Spider Man - No way home</span>
@@ -173,7 +168,7 @@ import footerComponent from '../components/footerComponent.vue';
           <th></th>
         </tr>
        
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/moonlightImage.png" alt="">
             <span>Moonlight</span>
@@ -187,7 +182,7 @@ import footerComponent from '../components/footerComponent.vue';
           <td>15th August, 2022</td>
           <td class="view">View</td>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/grimabyImage.png" alt="">
             <span>Grimsby</span>
@@ -201,7 +196,7 @@ import footerComponent from '../components/footerComponent.vue';
           <td>5th October, 2022</td>
           <td class="view">View</td>
         </tr>
-        <tr>
+        <tr class="tR">
           <td class="name">
             <img src="../assets/images/spiderman.png" alt="">
             <span>Spider Man - No way home</span>
@@ -225,6 +220,19 @@ import footerComponent from '../components/footerComponent.vue';
     <footerComponent/>
   </div>
 </template>
+
+<script >
+import headerComponent from '../components/headerComponent.vue';
+import footerComponent from '../components/footerComponent.vue';
+
+export default {
+  name:'overView',
+  components: {
+    headerComponent,
+    footerComponent
+  }
+}
+</script>
 <style scoped>
   .overview {
       color: #464951;
@@ -233,7 +241,7 @@ import footerComponent from '../components/footerComponent.vue';
       place-items: center;
       place-content: center;
       font-family: Helvetica Neue;
-      max-width: 85.4rem;
+     width: 83.4rem;
       margin: auto;
       line-height: 1.5;
   }
@@ -271,7 +279,6 @@ import footerComponent from '../components/footerComponent.vue';
     width: 82em;
     margin: auto;
   }
-  
   .graphSection {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -281,6 +288,7 @@ import footerComponent from '../components/footerComponent.vue';
   }
   .graphBox {
     border: 0.1em solid #E5E5E5;
+    border-radius: 0.3em;
     height: 22em;
   }
   .graphBox p {
@@ -356,19 +364,22 @@ import footerComponent from '../components/footerComponent.vue';
   }
   table {
     width: 74em;
-    margin: 0 auto;    
+    margin: 0 auto; 
+    overflow: hidden;
+    border-radius: 1em;
     border-collapse: collapse;
   }  
   th {
     text-align: left;
   }
   tr {
-    height: 4.5em;  
+    height: 4.5em;
     border: 0.1em solid #ddd;
-    border-bottom: none;
+    border-bottom: none;  
   }
-  tr:first-child {
-   border: none;
+  table .tableHead {
+    background-color: #F5F5F5;
+    border: 0.1em solid #e0e0e0;
   }
   .secondTable {
     display: grid;
@@ -381,10 +392,12 @@ import footerComponent from '../components/footerComponent.vue';
   .upcoming {
     display: flex;
     flex-direction: row;
-    margin:-2em auto auto auto;
+    margin:-3em auto auto auto;
     background-color: #F5F5F5;
+    border: 0.1em solid #e0e0e0;
+    border-radius:0 0 0.6em 0.6em;
     width:74em;
-    height: 3.9em; 
+    height: 4.5em; 
   }
   .upcoming a {
     color: #000000;
@@ -408,7 +421,7 @@ import footerComponent from '../components/footerComponent.vue';
     height: 2.2em;
     font-weight: 500;
     font-size: 1rem;
-    margin: 1.2em;
+    margin: 1.8em 1em;
   }
   .view:hover {
     background-color:#e0e0e0;
@@ -418,6 +431,7 @@ import footerComponent from '../components/footerComponent.vue';
     padding: 0.5em 0.7em;
     width: 2em;
     margin-right: 0.5em;
+    font-size: 0.8rem;
     background-color: #D1D8F7;
     border-radius: 2em;
   }
@@ -432,11 +446,7 @@ import footerComponent from '../components/footerComponent.vue';
   .headername {
     margin-top: 1.1em;
   }
-  table .tableHead {
-    background-color: #F5F5F5;
-    border: 0.1em solid #ddd;
-    /* border-radius: 1em 0.5em 0em 0em; */
-  }
+  
   .headername img {
     margin-top: 0.54em;
   }
