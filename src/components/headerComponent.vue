@@ -40,6 +40,7 @@ header {
   align-items: center;
   background-color: #000000;
   width: 84.3rem;
+  max-width: 100%;
   margin: auto;
   height: 4.5em;
 }
@@ -76,4 +77,19 @@ nav a:hover, nav a:focus {
   margin-top: 0.4em;
 }
 
+@media screen and (max-width:768px) {
+  header {
+    width: 48em;
+    /* margin: auto; */
+  }
+  nav {
+    padding-left: 1em;
+  }
+  .icons {
+    padding-right: 1em;
+  }
+  .icon {
+  margin-top: 0.7em;
+}
+}
 </style>

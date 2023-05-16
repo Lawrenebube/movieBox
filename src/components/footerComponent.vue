@@ -43,5 +43,9 @@ nav a {
   
   line-height: 2.3em;
 }
-
+@media screen and (max-width:768px) {
+  footer {
+    width: 48rem;
+  }
+}
 </style>

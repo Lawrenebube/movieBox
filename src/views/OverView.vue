@@ -241,7 +241,7 @@ export default {
       place-items: center;
       place-content: center;
       font-family: Helvetica Neue;
-     width: 83.4rem;
+       width: 83.4rem;
       margin: auto;
       line-height: 1.5;
   }
@@ -346,8 +346,7 @@ export default {
   .searchBar input {
     outline: none;
     /* overflow-x: visible; */
- }
-  
+ } 
   .searchBar {
     display: flex;
     flex-direction: row;
@@ -385,7 +384,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
-    width: 84.3em;
+    /* width: 84.3em; */
     padding: 1em 3em;
     margin: 0;
   }
@@ -446,8 +445,46 @@ export default {
   .headername {
     margin-top: 1.1em;
   }
-  
   .headername img {
     margin-top: 0.54em;
+  }
+  @media screen and (max-width:768px) {
+    .overview {
+      width: 48rem;
+      margin: auto;
+    }
+    .header {
+      width: 47em;
+      padding: 1em;
+      margin: auto;
+    }
+    main {
+      width: 47em;
+      padding: 0em 1em;
+    }
+    .graphSection {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 47em;
+    margin: auto;
+    padding: 1em ;
+    gap: 2em;
+  }
+  .firstTableHeading, .secondTableHeading {
+    width: 47em;
+    margin: auto;
+  }
+  table {
+     width: 47em;
+     margin: auto ;
+    } 
+    
+  .upcoming {    
+    width:47em;
+  }
+  .upcoming a {
+    margin: 0.8em auto auto 31em;
+    
+  }
   }
 </style>
