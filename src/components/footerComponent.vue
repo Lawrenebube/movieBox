@@ -22,8 +22,7 @@ footer{
   gap: 0.3em;
   align-items: center;
   background: #000000;
-  max-width: 84.3rem;
-  width: 100%;
+  width: 84.3rem;
   height: 4.5em;
   text-align: center;
   

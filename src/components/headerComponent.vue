@@ -40,7 +40,6 @@ header {
   align-items: center;
   background-color: #000000;
   width: 84.3rem;
-  max-width: 100%;
   margin: auto;
   height: 4.5em;
 }
